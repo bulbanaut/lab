@@ -36,7 +36,7 @@ x
 }
 
 fn pause() { //фукция паузы
-    let mut q = String::new();
+    let mut x = String::new();
     println!("Нажмите Enter чтобы выйти.");
-    stdin().read_line(&mut q).expect("ошибка");
+    stdin().read_line(&mut x).expect("ошибка");
 }
