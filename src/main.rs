@@ -1,7 +1,7 @@
 use std::io::stdin;
 
 /*
-TODO: вынести формулу 24 (x - 10sinX + |x^4 - x^5|) в отдельную функцию, сделать мейн лупом
+TODO: -
 Функции для задачи: .abs(), .sin(), .pow()
 */
 
@@ -23,19 +23,20 @@ fn main() {
             },
         }; //преобразование ввода со string в float-point integer с перезапуском loop в случае ошибки
 
-        let y: f64 = calc(x); //переменная Y приравнивается к функции calc от X
-        println!("{y}");
+        let x: f64 = calc(x); //переменная Y приравнивается к функции calc от X
+        println!("Результат {x}");
         pause(); //использование фунции паузы
         break; //разрыв петли
     }
 }
 
 fn calc(x: f64) -> f64 {
-let y: f64 = (&x - 10.0*&x.sin()) + (&x.powi(4) - &x.powi(5)).abs(); //функция calc выполняет y(x) = x - 10sinX + |x^4 - x^5|
-y
+let x: f64 = (&x - 10.0*&x.sin()) + (&x.powi(4) - &x.powi(5)).abs(); //функция calc выполняет y(x) = x - 10sinX + |x^4 - x^5|
+x
 }
 
 fn pause() { //фукция паузы
     let mut q = String::new();
+    println!("Нажмите Enter чтобы выйти.");
     stdin().read_line(&mut q).expect("ошибка");
 }
